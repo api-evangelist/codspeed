@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: https://codspeed.io/docs
+notes: >-
+  CodSpeed publishes no standalone public REST API OpenAPI, so this profile is
+  searched from the docs rather than derived from a spec. It documents the auth
+  models across CodSpeed's programmatic surfaces.
+summary:
+  types: [oauth2, oidc, token, github-app]
+schemes:
+  - name: mcp-oauth
+    surface: MCP Server (mcp.codspeed.io/mcp)
+    type: oauth2
+    detail: >-
+      The hosted MCP server uses OAuth. On first connect the client opens a
+      browser to log in to CodSpeed and authorize access; tokens are stored and
+      refreshed automatically. Grants the same repository/data access as the
+      account.
+    source: https://codspeed.io/docs/ai/mcp
+  - name: ci-oidc
+    surface: GitHub Actions CI
+    type: openIdConnect
+    detail: >-
+      Benchmark runs authenticate to CodSpeed from GitHub Actions via OIDC,
+      requiring the workflow `id-token: write` permission (no stored secret).
+    source: https://codspeed.io/docs/integrations/ci/github-actions/index
+  - name: cli-login
+    surface: CodSpeed CLI
+    type: token
+    detail: Browser-based `codspeed auth login` links the CLI to your CodSpeed account.
+    source: https://codspeed.io/docs/cli
+  - name: github-app
+    surface: Repository integration
+    type: github-app
+    detail: >-
+      CodSpeed integrates with repositories via a GitHub App (and GitLab);
+      source code is never stored.
+    source: https://codspeed.io/docs/integrations/providers/github
