@@ -1,0 +1,63 @@
+generated: '2026-07-18'
+method: searched
+source: https://codspeed.io/docs/reference
+packages:
+  - language: python
+    registry: pypi
+    name: pytest-codspeed
+    url: https://pypi.org/project/pytest-codspeed/
+    install: pip install pytest-codspeed
+    version: 5.0.3
+    official: true
+    description: pytest plugin to create and run CodSpeed benchmarks for Python code.
+  - language: javascript
+    registry: npm
+    name: "@codspeed/core"
+    url: https://www.npmjs.com/package/@codspeed/core
+    install: npm install @codspeed/core
+    version: 5.7.1
+    official: true
+    description: Core CodSpeed instrumentation library for Node.js benchmarking.
+  - language: javascript
+    registry: npm
+    name: "@codspeed/vitest-plugin"
+    url: https://www.npmjs.com/package/@codspeed/vitest-plugin
+    install: npm install -D @codspeed/vitest-plugin
+    version: 5.7.1
+    official: true
+    description: Vitest plugin to run CodSpeed benchmarks.
+  - language: javascript
+    registry: npm
+    name: "@codspeed/tinybench-plugin"
+    url: https://www.npmjs.com/package/@codspeed/tinybench-plugin
+    install: npm install -D @codspeed/tinybench-plugin
+    official: true
+    description: tinybench plugin to run CodSpeed benchmarks.
+  - language: rust
+    registry: crates.io
+    name: cargo-codspeed
+    url: https://crates.io/crates/cargo-codspeed
+    install: cargo install cargo-codspeed
+    official: true
+    description: cargo subcommand to build and run CodSpeed benchmarks for Rust.
+  - language: rust
+    registry: crates.io
+    name: codspeed
+    url: https://crates.io/crates/codspeed
+    install: cargo add codspeed
+    official: true
+    description: Rust crate providing the CodSpeed instrumentation and compatibility layers (criterion, divan, bencher).
+  - language: shell
+    registry: github
+    name: codspeed (CLI)
+    url: https://github.com/CodSpeedHQ/codspeed
+    install: curl -fsSL https://codspeed.io/install.sh | sh
+    official: true
+    description: Open-source CodSpeed CLI runner to benchmark any executable program.
+  - language: yaml
+    registry: github-actions
+    name: CodSpeedHQ/action
+    url: https://github.com/CodSpeedHQ/action
+    install: uses CodSpeedHQ/action@v4
+    official: true
+    description: GitHub Action to run CodSpeed benchmarks in CI.

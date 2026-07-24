@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://codspeed.io/changelog
+scheme: date-based
+current_version: null
+notes: Updates are identified by release date; no explicit semantic version scheme is published for the platform.
+entries:
+  - date: '2026-07-13'
+    title: Process and Thread Selection in Flame Graphs
+    type: addition
+    highlights: Multi-process/thread aware flamegraphs with filtering and split view.
+  - date: '2026-07-07'
+    title: Environment diffs in run comparisons
+    type: addition
+    highlights: Automatic detection of toolchain, library, and hardware changes between benchmark runs.
+  - date: '2026-05-06'
+    title: Java Support
+    type: addition
+    highlights: JMH integration to benchmark Java codebases via Maven and Gradle.
+  - date: '2026-03-24'
+    title: Ask the Wizard (@codspeedbot) right from GitHub
+    type: addition
+    highlights: AI assistant for performance analysis directly in pull request comments.
+  - date: '2026-03-16'
+    title: 'CodSpeed for Agents: MCP Server and Skills'
+    type: addition
+    highlights: MCP server and agent skills enabling AI assistants to access performance data and optimize code.
+  - date: '2026-01-23'
+    title: 'Introducing CodSpeed CLI: Benchmark Anything'
+    type: addition
+    highlights: Command-line runner supporting arbitrary executable benchmarking across three measurement modes.
+  - date: '2026-01-22'
+    title: Search and Filter Benchmarks
+    type: addition
+    highlights: GitHub-style filtering with text search and status/mode categorization.
+  - date: '2026-01-21'
+    title: 'Meet the Memory Instrument: Track Memory Consumption Too'
+    type: addition
+    highlights: Memory tracking including peak usage, allocations, and timeline visualization.

@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: https://codspeed.io/docs/security
+url: https://trust.codspeed.io
+certifications:
+  - name: SOC 2 Type II
+    status: in-progress
+    detail: Observation period started March 2026, expected completion early June 2026 (per security docs). Verified via Oneleet badge.
+compliance_program: >-
+  CodSpeed publishes a Trust Center (trust.codspeed.io) and a security page
+  documenting practices, policies, and controls. SOC 2 Type II certification is
+  in progress. CodSpeed states it never stores customer source code; repositories
+  are fetched on demand for Wizard analysis and not retained.
+contact: support@codspeed.io
+evidence:
+  - source: https://codspeed.io/docs/security
+    keywords: [soc 2 type ii, trust center, oneleet badge, security practices]
+  - source: https://trust.codspeed.io
+    kind: trust-center

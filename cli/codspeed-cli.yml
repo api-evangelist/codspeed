@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: https://codspeed.io/docs/cli
+cli:
+  name: codspeed
+  open_source: true
+  repository: https://github.com/CodSpeedHQ/codspeed
+  supported_os: [Ubuntu 20.04, Ubuntu 22.04, Ubuntu 24.04, Debian 11, Debian 12]
+  install:
+    - method: script
+      command: curl -fsSL https://codspeed.io/install.sh | sh
+    - method: pinned-version
+      command: curl -fsSL https://codspeed.io/v4.8.2/install.sh | sh
+  auth:
+    command: codspeed auth login
+    model: browser-based login linking to your CodSpeed account
+  commands:
+    - name: auth login
+      description: Authenticate the CLI with your CodSpeed account.
+    - name: exec
+      description: Run a command under CodSpeed instrumentation and upload results (e.g. codspeed exec -- sleep 1).
+    - name: run
+      description: Run configured benchmarks and report to CodSpeed.
+  instruments: [walltime, cpu-simulation, memory]
+  notes: >-
+    Benchmarks any executable program across languages. Results upload to
+    app.codspeed.io for reporting and comparison.

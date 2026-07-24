@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: https://codspeed.io/docs/security
+standards:
+  - id: soc2-type-ii
+    conforms: false
+    status: in-progress
+    evidence: Security docs state SOC 2 Type II observation period Mar-Jun 2026; Oneleet badge published.
+  - id: oauth2
+    conforms: true
+    evidence: MCP server authenticates via OAuth (https://codspeed.io/docs/ai/mcp).
+  - id: oidc
+    conforms: true
+    evidence: GitHub Actions CI authenticates to CodSpeed via OpenID Connect (id-token write).
+  - id: mcp
+    conforms: true
+    evidence: Hosted MCP server implements the Model Context Protocol specification (7 tools).
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: No /.well-known/security.txt published.

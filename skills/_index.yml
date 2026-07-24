@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/CodSpeedHQ/codspeed/tree/main/skills
+notes: >-
+  CodSpeed publishes first-party Agent Skills in its open-source repository and
+  via the official Claude plugin marketplace (/plugin install
+  codspeed@claude-plugins-official). Saved verbatim. Skills require the CodSpeed
+  MCP server (mcp/codspeed-mcp.yml).
+skills:
+  - file: codspeed-optimize.md
+    name: codspeed-optimize
+    description: Autonomously optimize code for performance using CodSpeed benchmarks, flamegraph analysis, and iterative measure/analyze/change/re-measure loops.
+    source: https://github.com/CodSpeedHQ/codspeed/blob/main/skills/codspeed-optimize/SKILL.md
+    requires: mcp/codspeed-mcp.yml
+  - file: codspeed-setup-harness.md
+    name: codspeed-setup-harness
+    description: Analyze a project, pick the right benchmarking framework, write representative benchmarks, and verify the setup through the CodSpeed CLI (Rust, Python, Node.js, Go, C/C++, exec harness).
+    source: https://github.com/CodSpeedHQ/codspeed/blob/main/skills/codspeed-setup-harness/SKILL.md
+    requires: mcp/codspeed-mcp.yml

@@ -1,7 +1,18 @@
 aid: codspeed
 name: CodSpeed
-description: CodSpeed is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  CodSpeed is a continuous performance testing and optimization platform that
+  automatically detects performance regressions in pull requests and proposes
+  autonomous optimizations. It runs benchmarks with sub-1% variance inside CI
+  (GitHub Actions, GitLab CI, Buildkite), generates differential flamegraphs to
+  pinpoint the exact lines that degraded, and gates PRs that fail performance
+  standards. CodSpeed supports Rust, C++, Go, Java, Python, and Node.js via
+  first-party harnesses (pytest-codspeed, cargo-codspeed / codspeed-rust,
+  google_benchmark, JMH, vitest, tinybench, benchmark.js), CPU-simulation,
+  walltime, and memory instruments, plus MongoDB database instrumentation. It
+  ships an open-source CLI, a GitHub Action, a hosted MCP server, and packaged
+  Agent Skills so AI coding assistants can investigate regressions and optimize
+  code directly. CodSpeed is a Techstars-backed company.
 url: https://raw.githubusercontent.com/api-evangelist/codspeed/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +20,33 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://codspeed.io/logo.svg
 tags:
 - Company
+- Performance
+- Benchmarking
+- Continuous Integration
+- Developer Tools
+- Observability
+- Testing
+- DevOps
+- AI
+- MCP
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +56,67 @@ maintainers:
 common:
 - type: Website
   url: https://codspeed.io/
+- type: DeveloperPortal
+  url: https://app.codspeed.io/
+- type: Documentation
+  url: https://codspeed.io/docs
+- type: APIReference
+  url: https://codspeed.io/docs/reference
+- type: GettingStarted
+  url: https://codspeed.io/docs/quickstart
+- type: Blog
+  url: https://codspeed.io/blog
+- type: Support
+  url: mailto:support@codspeed.io
+- type: Community
+  url: https://discord.gg/MxpaCfKSqF
+- type: GitHubOrganization
+  url: https://github.com/CodSpeedHQ
+- type: Pricing
+  url: https://codspeed.io/pricing
+- type: SignUp
+  url: https://app.codspeed.io/login?flow=get-started
+- type: Login
+  url: https://app.codspeed.io/login
+- type: TermsOfService
+  url: https://codspeed.io/terms
+- type: PrivacyPolicy
+  url: https://codspeed.io/privacy
+- type: ChangeLog
+  url: https://codspeed.io/changelog
+- type: ChangeLog
+  name: CodSpeed Changelog (structured)
+  url: changelog/codspeed-changelog.yml
+- type: MCPServer
+  name: CodSpeed MCP Server
+  url: mcp/codspeed-mcp.yml
+- type: AgentSkill
+  name: CodSpeed Agent Skills
+  url: skills/_index.yml
+- type: Packages
+  url: packages/codspeed-packages.yml
+- type: SDKs
+  url: packages/codspeed-packages.yml
+- type: CLI
+  url: cli/codspeed-cli.yml
+- type: LLMsTxt
+  url: llms/codspeed-llms.txt
+- type: Authentication
+  url: authentication/codspeed-authentication.yml
+- type: Conformance
+  url: conformance/codspeed-conformance.yml
+- type: Compliance
+  url: https://trust.codspeed.io
+- type: TrustCenter
+  url: https://trust.codspeed.io
+- type: Security
+  url: https://codspeed.io/docs/security
+- type: VulnerabilityDisclosure
+  url: security/codspeed-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/codspeed-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+host: https://codspeed.io
+notes: >-
+  Probed the standard /.well-known/ discovery surface on codspeed.io and
+  app.codspeed.io. No well-known documents are published (all 404). A docs
+  llms.txt IS published (see llms/codspeed-llms.txt) but that is not a
+  /.well-known/ resource. Absence recorded as valid data.
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - host: https://app.codspeed.io
+    path: /.well-known/security.txt
+    status: 404
+  - host: https://app.codspeed.io
+    path: /.well-known/openid-configuration
+    status: 404
