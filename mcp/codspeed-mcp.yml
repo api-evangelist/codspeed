@@ -11,22 +11,29 @@ server:
     claude_code_plugin: /plugin install codspeed@claude-plugins-official
     claude_code_cli: claude mcp add --transport http CodSpeed https://mcp.codspeed.io/mcp
     add_mcp: npx add-mcp https://mcp.codspeed.io/mcp --name CodSpeed
-description: >-
-  Hosted, remote MCP server that gives AI-powered coding tools direct access to
-  CodSpeed performance data (benchmark runs, comparisons, flamegraphs) so agents
-  can investigate regressions and optimize code without leaving the editor.
+description: Hosted, remote MCP server that gives AI-powered coding tools direct access to CodSpeed performance
+  data (benchmark runs, comparisons, flamegraphs) so agents can investigate regressions and optimize code
+  without leaving the editor.
 tools:
-  - name: list_repositories
-    description: List all CodSpeed-enabled repositories you have access to (name, visibility, description).
-  - name: list_runs
-    description: List recent performance runs for a repository (run IDs, commit, status, event, branch, PR).
-  - name: get_run
-    description: Inspect a single performance run and its benchmark results (names, identifiers, values).
-  - name: compare_runs
-    description: Compare two performance runs and return a markdown performance report with improvements/regressions.
-  - name: get_benchmark_result
-    description: Retrieve a specific benchmark result.
-  - name: query_flamegraph
-    description: Query a flamegraph to identify hot spots and bottlenecks.
-  - name: list_threads
-    description: List processes/threads captured in a run for thread-aware analysis.
+- name: list_repositories
+  description: List all CodSpeed-enabled repositories you have access to (name, visibility, description).
+- name: list_runs
+  description: List recent performance runs for a repository (run IDs, commit, status, event, branch,
+    PR).
+- name: get_run
+  description: Inspect a single performance run and its benchmark results (names, identifiers, values).
+- name: compare_runs
+  description: Compare two performance runs and return a markdown performance report with improvements/regressions.
+- name: get_benchmark_result
+  description: Retrieve a specific benchmark result.
+- name: query_flamegraph
+  description: Query a flamegraph to identify hot spots and bottlenecks.
+- name: list_threads
+  description: List processes/threads captured in a run for thread-aware analysis.
+deployment:
+  mode: remote
+  endpoint: https://mcp.codspeed.io/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
