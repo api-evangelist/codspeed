@@ -1,12 +1,12 @@
-generated: '2026-07-18'
+generated: '2026-09-19'
 method: searched
 host: https://codspeed.io
-notes: >-
-  Probed the standard /.well-known/ discovery surface on codspeed.io and
-  app.codspeed.io. No well-known documents are published (all 404). A docs
-  llms.txt IS published (see llms/codspeed-llms.txt) but that is not a
-  /.well-known/ resource. Absence recorded as valid data.
-documents:
+notes: Probed the standard /.well-known/ discovery surface on codspeed.io and app.codspeed.io. No well-known
+  documents are published (all 404). A docs llms.txt IS published (see llms/codspeed-llms.txt) but that
+  is not a /.well-known/ resource. Absence recorded as valid data.
+hosts:
+- host: https://codspeed.io
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -17,9 +17,42 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
-  - host: https://app.codspeed.io
-    path: /.well-known/security.txt
+  - path: /.well-known/security.txt
     status: 404
-  - host: https://app.codspeed.io
-    path: /.well-known/openid-configuration
+  - path: /.well-known/openid-configuration
     status: 404
+- host: https://mcp.codspeed.io
+  documents:
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: codspeed-mcp-oauth-protected-resource.json
+    bytes: 154
+  path_echo_control: passed
+- host: https://api.codspeed.io
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: codspeed-api-oauth-authorization-server.json
+    bytes: 464
+  path_echo_control: passed
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
+  - host: https://mcp.codspeed.io
+    path: /.well-known/oauth-protected-resource
+    file: codspeed-mcp-oauth-protected-resource.json
+  - host: https://api.codspeed.io
+    path: /.well-known/oauth-authorization-server
+    file: codspeed-api-oauth-authorization-server.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host
+note: 'MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s
+  primary hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed
+  and were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'
