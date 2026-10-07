@@ -1,0 +1,43 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://codspeed.io/pricing
+sources:
+- https://codspeed.io/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: per-seat
+delivery:
+  delivery: managed+licensed
+  method: page
+  read: '2026-10-07'
+  evidence: On-premise deployment
+  managed_tier: Pro
+published: true
+note: Annual/monthly toggle (Save 25%); bare-metal macro runners 600 min/month free then $0.032 per minute;
+  on-premise deployment offered in Enterprise.
+plan_count: 3
+currency: USD
+plans:
+- name: Free
+  price_text: $0 /user/month
+  price: 0
+  currency: USD
+  period: month
+  unit: user
+  included_quota: Unlimited runs and repositories, Up to 5 users, 3-month history, 600 macro runner minutes/month
+- name: Pro
+  price_text: $15 /user/month
+  price: 15
+  currency: USD
+  period: month
+  unit: user
+  included_quota: All Free features, unlimited history, priority support, 600 macro runner minutes/month
+  overage: Macro runners usage $0.032/min after 600min/month
+- name: Enterprise
+  price_text: Custom
+  period: none
+  included_quota: All Pro features, SSO/SAML, on-premise deployment, Performance Data API
