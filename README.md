@@ -64,6 +64,109 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-CodSpeed is a company surfaced as a portfolio company of techstars and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+CodSpeed is a continuous performance testing and optimization platform that automatically detects performance regressions in pull requests and proposes autonomous optimizations. It runs benchmarks with sub-1% variance inside CI (GitHub Actions, GitLab CI, Buildkite), generates differential flamegraphs to pinpoint the exact lines that degraded, and gates PRs that fail performance standards. CodSpeed supports Rust, C++, Go, Java, Python, and Node.js via first-party harnesses (pytest-codspeed, cargo-codspeed / codspeed-rust, google_benchmark, JMH, vitest, tinybench, benchmark.js), CPU-simulation, walltime, and memory instruments, plus MongoDB database instrumentation. It ships an open-source CLI, a GitHub Action, a hosted MCP server, and packaged Agent Skills so AI coding assistants can investigate regressions and optimize code directly. CodSpeed is a Techstars-backed company.
 
-Backed by: techstars — https://codspeed.io/
+**Areas:** Company · Performance · Benchmarking · Continuous Integration · Developer Tools · Observability · Testing · DevOps · Artificial Intelligence · MCP
+
+## CodSpeed on APIs.io
+
+Everything profiled for CodSpeed is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/codspeed/](https://apis.io/providers/codspeed/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [CodSpeed](https://apis.io/servers/codspeed/codspeed/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Codspeed Authentication](https://apis.io/security/codspeed/codspeed-authentication/)
+- [Codspeed Domain Security](https://apis.io/security/codspeed/codspeed-domain-security/)
+- [Codspeed Trust Center](https://apis.io/security/codspeed/codspeed-trust-center/)
+- [Codspeed Vulnerability Disclosure](https://apis.io/security/codspeed/codspeed-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Codspeed Plans Pricing](https://apis.io/plans/codspeed/codspeed-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://codspeed.io/)
+- [Documentation](https://codspeed.io/docs)
+- [Getting started](https://codspeed.io/docs/quickstart)
+- [API reference](https://codspeed.io/docs/reference)
+- [Pricing](https://codspeed.io/pricing)
+- [Sign up](https://app.codspeed.io/login?flow=get-started)
+- [Changelog](https://codspeed.io/changelog)
+- [Blog](https://codspeed.io/blog)
+- [Security](https://codspeed.io/docs/security)
+- [Compliance](https://trust.codspeed.io)
+- [Trust centre](https://trust.codspeed.io)
+- [Terms of service](https://codspeed.io/terms)
+- [Privacy policy](https://codspeed.io/privacy)
+- [GitHub](https://github.com/CodSpeedHQ)
+
+## API Evangelist rating
+
+**Kin Score 41.9** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 64.3 |
+| Access clarity | 76.3 |
+
+**Agent readiness 30.9** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 28.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/codspeed/](https://apis.io/providers/codspeed/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for CodSpeed: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/codspeed/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
